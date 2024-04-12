@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
+
     <link rel="stylesheet" href="assets/style/main.css" />
     <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
     <link
@@ -97,7 +98,7 @@
                       tak tertandingi dalam setiap gigitannya.
                     </p>
                     <a
-                      href="#"
+                      href="#order"
                       class="text-decoration-none px-3 py-2 fw-semibold"
                       >Pesan Sekarang</a
                     >
@@ -137,7 +138,7 @@
                       dalam setiap gigitannya.
                     </p>
                     <a
-                      href="#"
+                      href="#order"
                       class="text-decoration-none px-3 py-2 fw-semibold"
                       >Pesan Sekarang</a
                     >
@@ -177,7 +178,7 @@
                       tekstur dan cita rasa yang memikat.
                     </p>
                     <a
-                      href="#"
+                      href="#order"
                       class="text-decoration-none px-3 py-2 fw-semibold"
                       >Pesan Sekarang</a
                     >
@@ -935,6 +936,7 @@
           </div>
         </section>
 
+        <!--==================== FAQ ====================-->
         <section id="faq" style="margin: 50px auto">
           <div class="container px-3">
             <h2
@@ -1149,6 +1151,7 @@
           </div>
         </section>
 
+        <!--==================== REVIEW ====================-->
         <section id="review" style="margin: 100px auto">
           <div class="container">
             <h2
@@ -1164,7 +1167,6 @@
                 style="margin-bottom: 80px"
                 data-aos="fade-left"
                 data-aos-duration="2000"
-                data-aos-delay="500"
               >
                 <div class="swiper-slide p-3 shadow-sm rounded">
                   <div class="d-flex gap-3 mb-3">
@@ -1312,6 +1314,258 @@
                 </div>
               </div>
               <div class="swiper-pagination" data-aos="zoom-in-up"></div>
+            </div>
+          </div>
+        </section>
+
+        <!--==================== ORDER ====================-->
+        <section id="order">
+          <div class="container px-4 px-lg-5">
+            <h2
+              class="title-section fs-1 fw-bolder text-center m-auto position-relative"
+              data-aos="zoom-in"
+              data-aos-duration="6000"
+            >
+              PESAN SEKARANG
+            </h2>
+
+            <!--==================== FORM ====================-->
+            <div
+              class="shadow mx-auto mt-5 border rounded-2 p-3"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="3200"
+            >
+              <form class="d-flex flex-column">
+                <div class="row">
+                  <div class="col-lg-6 d-flex flex-column gap-3">
+                    <div class="d-flex flex-column gap-1">
+                      <label for="orderer-name" class="fw-medium"
+                        >Nama Pemesan:</label
+                      >
+                      <input
+                        type="text"
+                        id="orderer-name"
+                        class="form-control bg-body-secondary"
+                        style="box-shadow: none !important; border: none"
+                      />
+                      <p class="error-message_input">
+                        Nama pemesan tidak boleh kosong!
+                      </p>
+                    </div>
+
+                    <div class="d-flex flex-column gap-1">
+                      <label for="chooseFood" class="fw-medium"
+                        >Pilih Menu:</label
+                      >
+                      <select
+                        id="chooseFood"
+                        class="form-select bg-body-secondary rounded"
+                        style="box-shadow: none !important; border: none"
+                      >
+                        <option value="" selected disabled>Pilihan Menu</option>
+                        <option value="burger-komplit" data-price="21000">
+                          Burger Komplit (Rp21,000)
+                        </option>
+                        <option value="kebab-komplit" data-price="28000">
+                          Kebab Komplit (Rp28,000)
+                        </option>
+                        <option value="dimsum-komplit" data-price="92000">
+                          Dimsum Komplit (Rp92,000)
+                        </option>
+                      </select>
+                      <p class="error-message_input">
+                        Pilihlah salah satu menu!
+                      </p>
+                    </div>
+
+                    <div class="d-flex flex-column gap-1">
+                      <label for="quantity" class="fw-medium"
+                        >Jumlah Pesanan:</label
+                      >
+                      <input
+                        type="number"
+                        id="quantity"
+                        class="form-control bg-body-secondary"
+                        min="1"
+                        value="1"
+                        style="box-shadow: none !important; border: none"
+                      />
+                      <p class="error-message_input">Minimal lebih dari 0</p>
+                    </div>
+
+                    <div class="d-flex flex-column gap-1">
+                      <label for="address" class="fw-medium">Alamat:</label>
+                      <textarea
+                        id="address"
+                        class="form-control bg-body-secondary"
+                        cols="30"
+                        rows="5"
+                        style="
+                          resize: none;
+                          box-shadow: none !important;
+                          border: none;
+                        "
+                      ></textarea>
+                      <p class="error-message_input">
+                        Alamat tidak boleh kosong!
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6 d-flex flex-column gap-3">
+                    <div class="d-flex flex-column gap-1">
+                      <label for="email" class="fw-medium mt-3 mt-lg-0"
+                        >Email:</label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        class="form-control bg-body-secondary"
+                        style="box-shadow: none !important; border: none"
+                      />
+                      <p class="error-message_input">
+                        Email tidak boleh kosong
+                      </p>
+                    </div>
+
+                    <div class="d-flex flex-column gap-1">
+                      <label for="noWhatsApp" class="fw-medium"
+                        >Nomor WhatsApp:</label
+                      >
+                      <input
+                        type="tel"
+                        id="noWhatsApp"
+                        class="form-control bg-body-secondary"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                        style="box-shadow: none !important; border: none"
+                      />
+                      <p class="error-message_input">
+                        No WhatsApp wajib di isi!
+                      </p>
+                    </div>
+
+                    <div class="d-flex flex-column gap-1">
+                      <label for="dateAndTime" class="fw-medium"
+                        >Tanggal dan Waktu</label
+                      >
+                      <input
+                        type="datetime-local"
+                        id="dateAndTime"
+                        class="form-control bg-body-secondary"
+                        style="box-shadow: none !important; border: none"
+                      />
+                      <p class="error-message_input">
+                        Tanggal dan Waktu wajib di pilih!
+                      </p>
+                    </div>
+
+                    <div class="d-flex flex-column gap-1">
+                      <label for="message" class="fw-medium">Pesan Kamu:</label>
+                      <textarea
+                        id="message"
+                        class="form-control bg-body-secondary"
+                        cols="30"
+                        rows="5"
+                        style="
+                          resize: none;
+                          box-shadow: none !important;
+                          border: none;
+                        "
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <button type="button" class="btn-add_order mt-4 btn fw-semibold">
+                Tambah Pemesanan
+              </button>
+            </div>
+
+            <div
+              id="summaryOrder"
+              class="shadow mx-auto mt-5 border rounded p-3"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="3200"
+            >
+              <div class="d-flex justify-content-between align-items-center">
+                <h3 class="fw-semibold">Ringkasan Pesanan</h3>
+                <img
+                  src="assets/images/logo-gta.png"
+                  alt="Logo"
+                  loading="lazy"
+                  style="width: 50px"
+                />
+              </div>
+
+              <strong>Informasi Pemesan:</strong>
+              <ul id="informationCustomer"></ul>
+              <strong>Menu Yang Di Pesan:</strong>
+              <ul id="menuOrdered"></ul>
+              <strong>Waktu Pemesanan:</strong>
+              <ul id="dateAndTimeSummaryOrder"></ul>
+              <strong>Pesan Pelanggan:</strong>
+              <ul id="messageSummaryOrder"></ul>
+
+              <div
+                class="d-flex flex-column flex-lg-row justify-content-between align-items-center"
+              >
+                <h4 class="mt-3 fw-bolder" id="totalPriceMenu">
+                  Total Harga: Rp0,00
+                </h4>
+                <button
+                  type="button"
+                  id="btn_order-now"
+                  class="btn fw-semibold"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop1"
+                >
+                  Pesan Sekarang
+                </button>
+
+                <div
+                  class="modal fade"
+                  id="staticBackdrop1"
+                  data-bs-backdrop="static"
+                  data-bs-keyboard="false"
+                  tabindex="-1"
+                  aria-labelledby="staticBackdropLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                          Pesan Sekarang
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                        ></button>
+                      </div>
+                      <div class="modal-body">Yakin Untuk Memesan?</div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn_close-order-now_summary-order px-2 py-1 rounded"
+                          data-bs-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button
+                          type="button"
+                          class="btn_order-now_summary-order px-2 py-1 fw-semibold rounded"
+                        >
+                          Ya Saya Yakin!
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -2,7 +2,6 @@
 
 * {
     box-sizing: border-box;
-    list-style: none;
     text-decoration: none;
     outline: none;
     border: none;
@@ -271,29 +270,158 @@ nav .nav.nav-active{
 }
 
 /* ====================REVIEW==================== */
-#review .container .review-content {
+#review .container .review-content{
     font-size: 14px;
     color: #000;
     height: 100%;
 }
 
-#review .container .review-content .swiper {
+#review .container .review-content .swiper{
     width: 100%;
     height: 100%;
 }
 
-#review .container .review-content .swiper-slide {
+#review .container .review-content .swiper-slide{
     font-size: 18px;
     background: #fff;
     width: auto !important;
 }
-.accordion-button {
+
+.accordion-button{
     box-shadow: none !important;
 }
 
-.accordion-button:not(.collapsed) {
+.accordion-button:not(.collapsed){
     background-color: transparent;
 }
+
+/* ====================ORDER NOW==================== */
+/* #order .container #warningMenuSelect{
+    opacity: 0;
+    font-size: 12px;
+    padding: 10px;
+    z-index: 9999;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+#order .container #warningMenuSelect.warningMenuSelectActive{
+    opacity: 1;
+} */
+
+/* #order .container #warningMenuSelect svg{
+    width: 20px;
+    height: 20px;
+    color: black;
+} */
+#order .container form .row input:focus, select.form-select:focus{
+    outline: 2px solid var(--color-primary);
+}
+
+#order .container form .row .error-message_input{
+    display: none;
+    color: var(--color-primary);
+    font-size: 12px;
+    margin-bottom: -5px;
+}
+
+#order .container form .row .error-message_input.error-message_input-active{
+    display: block;
+}
+
+#order .container .btn-add_order{
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+#order .container .btn-add_order:hover{
+    background-color: var(--color-primary-hover);
+}
+
+#order .container #summaryOrder{
+    width: 100%;
+    display: none;
+}
+
+#order .container #summaryOrder strong{
+    color: var(--color-primary);
+}
+
+#order .container #informationCustomer li {
+    word-wrap: break-word;
+}
+
+#order .container #informationCustomer span, #dateAndTimeSummaryOrder span, #messageSummaryOrder span{
+    font-weight: 600;
+}
+
+#order .container #btn_order-now{
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+}
+
+#order .container #btn_order-now:hover{
+    background-color: var(--color-primary-hover);
+}
+
+#order .container .btn_order-now_summary-order{
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+#order .container .btn_order-now_summary-order:hover{
+    background-color: var(--color-primary-hover);
+}
+
+#order .container .btn_close-order-now_summary-order{
+    background-color: silver;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+}
+
+#order .container .btn_close-order-now_summary-order:hover{
+    background-color: rgb(208, 207, 207);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Ubah opasitas sesuai kebutuhan */
+    z-index: 1000;
+    /* Pastikan z-index lebih tinggi dari elemen lainnya */
+}
+/* #order .container form .row select option:hover{
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+} */
+
+/* #order .container form .row
+select option:checked {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+#order .container form .row select.form-select {
+    outline: none;
+} */
 
 @media screen and (min-width: 992px) {
     nav #hamburger-menu {
@@ -333,8 +461,12 @@ nav .nav.nav-active{
         width: 50ch;
     }
 
-    .btn-custom {
+    .btn-custom{
         font-size: 18px;
+    }
+
+    #order .container #summaryOrder{
+        width: 75%;
     }
 } 
 
